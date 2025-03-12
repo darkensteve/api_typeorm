@@ -1,27 +1,25 @@
 {
-  "name": "node-mysql-crud-api",
+  "name": "api_typeorm",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "API with TypeORM and TypeScript",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "node ./server.js",
-    "start:dev": "nodemon ./server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "start:dev": "tsc-watch --onSuccess \"node dist/server.js\"",
+    "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "description": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "joi": "^17.2.0",
-    "mysql2": "^2.1.0",
-    "rootpath": "^0.1.2",
-    "sequelize": "^6.3.4",
-    "sqlite3": "^5.1.7"
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.41"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "tsc-watch": "^4.6.2",
+    "typescript": "^4.5.5"
   }
 }
